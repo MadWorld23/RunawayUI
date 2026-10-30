@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<title>Runaway UI — Playground</title>
+
+</head>
+<body>
+
+<header>
+  <h1>Runaway UI</h1>
+  <p class="subtitle">Eine kleine Bibliothek für ausweichende Elemente</p>
+</header>
+
+<div class="controls">
+  <div class="control-group">
+    <label>Strategie:</label>
+    <select id="strategySelect">
+      <option value="flee">Fliehen</option>
+      <option value="shrink">Schrumpfen &amp; Hüpfen</option>
+      <option value="teleport">Teleportieren</option>
+      <option value="hide">Verstecken</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label>Geschwindigkeit:</label>
+    <input type="range" id="speedRange" min="1" max="10" value="5">
+    <span class="val" id="speedValue">5</span>
+  </div>
+  <div class="control-group">
+    <label>Anzahl Buttons:</label>
+    <input type="range" id="countRange" min="1" max="5" value="3">
+    <span class="val" id="countValue">3</span>
+  </div>
+</div>
+
+<div class="playground" id="playground"></div>
+
+<div class="actions">
+  <button class="primary-btn" id="spawnBtn">Buttons spawnen</button>
+  <button class="primary-btn ghost" id="resetBtn">Reset</button>
+</div>
+
+<p class="feedback" id="feedback"></p>
+
+<div class="stats">
+  <div class="stat-item"><strong id="escapeCount">0</strong><span>Fluchtversuche</span></div>
+  <div class="stat-item"><strong id="clickCount">0</strong><span>Erwischt</span></div>
+  <div class="stat-item"><strong id="avgDistance">0</strong><span>Ø Fluchtdistanz (px)</span></div>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
